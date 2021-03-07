@@ -27,10 +27,12 @@ import net.minecraft.util.text.event.HoverEvent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 
-public class BlockTeleporter extends Block implements ITileEntityProvider, IItemBlock {
+public class BlockTeleporter extends Block implements IItemBlock, ITileEntityProvider {
 
     public BlockTeleporter() {
         super(Properties.create(Material.WOOD).hardnessAndResistance(3F).sound(SoundType.WOOD));
@@ -39,7 +41,7 @@ public class BlockTeleporter extends Block implements ITileEntityProvider, IItem
 
     @Override
     public Item toItem() {
-        return new BlockItem(this, new Item.Properties().group(ItemGroup.DECORATIONS)).setRegistryName(getRegistryName());
+        return new BlockItem(this, new Item.Properties().group(ItemGroup.DECORATIONS)).setRegistryName(Objects.requireNonNull(getRegistryName()));
     }
 
     @Override

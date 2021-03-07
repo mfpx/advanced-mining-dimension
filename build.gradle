@@ -78,6 +78,7 @@ minecraft {
 }
 
 dependencies {
+    implementation 'org.jetbrains:annotations:20.1.0'
     minecraft "net.minecraftforge:forge:${mod_minecraft_version}-${forge_version}"
 
     shadow fg.deobf("de.maxhenkel.corelib:corelib:${mod_minecraft_version}-${corelib_version}:api")

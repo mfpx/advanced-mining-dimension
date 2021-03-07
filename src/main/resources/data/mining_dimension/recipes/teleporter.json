@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "LPL",
-    "PIP",
-    "LPL"
+    "LSL",
+    "PSP",
+    "LSL"
   ],
   "key": {
     "L": {
@@ -12,8 +12,8 @@
     "P": {
       "tag": "minecraft:planks"
     },
-    "I": {
-      "item": "minecraft:stone_pickaxe"
+    "S": {
+      "item": "minecraft:stick"
     }
   },
   "result": {

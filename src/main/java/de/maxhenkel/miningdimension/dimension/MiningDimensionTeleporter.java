@@ -14,11 +14,12 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.util.ITeleporter;
 
+import javax.annotation.Nullable;
 import java.util.function.Function;
 
 public class MiningDimensionTeleporter implements ITeleporter {
 
-    private BlockPos pos;
+    private final BlockPos pos;
 
     public MiningDimensionTeleporter(BlockPos pos) {
         this.pos = pos;
@@ -62,6 +63,7 @@ public class MiningDimensionTeleporter implements ITeleporter {
         return null;
     }
 
+    @Nullable
     private BlockPos placeTeleporterMining(ServerWorld world, Chunk chunk) {
         BlockPos.Mutable pos = new BlockPos.Mutable();
         for (int y = 0; y < 255; y++) {
